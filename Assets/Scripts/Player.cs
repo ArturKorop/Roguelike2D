@@ -63,7 +63,7 @@ public class Player : MovingObject
         GameManager.Instance.PlayersTurn = false;
     }
 
-    protected override void OnCantMove<T>(T component)
+    protected override void OnCanMove<T>(T component)
     {
         var hitWall = component as Wall;
         hitWall.DamageWall(this.WallDamage);
